@@ -41,6 +41,6 @@ public class VendingMachine {
 
         double cost;
         if((cost = products.get(index).getPrice()) > credit) throw new Exception("Not enough credit");
-        editCredit(cost);
+        editCredit(-cost);
     }
 }
