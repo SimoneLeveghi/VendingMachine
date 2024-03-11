@@ -14,8 +14,8 @@ public class VendingMachine {
         return credit;
     }
 
-    public ArrayList<Product> getProducts() {
-        return new ArrayList<Product>(this.products);
+    public Product[] getProducts() {
+        return this.products.toArray(new Product[0]);
     }
 
     public void setCredit(double credit) {
