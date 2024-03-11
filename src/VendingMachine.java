@@ -37,9 +37,10 @@ public class VendingMachine {
     }
 
     public void buyProduct(int index) throws Exception {
+        if(index <= 0) throw new ArrayIndexOutOfBoundsException("Invalid index");
+
         double cost;
         if((cost = products.get(index).getPrice()) > credit) throw new Exception("Not enough credit");
-
-        this.credit -= cost;
+        editCredit(cost);
     }
 }
