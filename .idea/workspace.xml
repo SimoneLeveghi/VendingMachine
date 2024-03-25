@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eda14798-77dc-4017-82c7-bcc28f15efdf" name="Changes" comment="Fix method buyProduct() in VendingMachine">
+    <list default="true" id="eda14798-77dc-4017-82c7-bcc28f15efdf" name="Changes" comment="Add class V">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/V.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/V.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +96,28 @@
       <option name="project" value="LOCAL" />
       <updated>1710147666686</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Fix method buyProduct() in VendingMachine">
+      <created>1710147955435</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1710147955435</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Implement basic GUI">
+      <created>1710148096772</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1710148096772</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Add class V">
+      <created>1711350502600</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1711350502600</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -118,17 +141,8 @@
     <MESSAGE value="Fix method getProducts() in VendingMachine" />
     <MESSAGE value="Improve checks in method buyProduct() in VendingMachine" />
     <MESSAGE value="Fix method buyProduct() in VendingMachine" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix method buyProduct() in VendingMachine" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/GUI.java</url>
-          <line>39</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Implement basic GUI" />
+    <MESSAGE value="Add class V" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add class V" />
   </component>
 </project>

@@ -22,6 +22,7 @@ public class Product {
             this.name = this.name.replaceAll("  ", " ");
         }
         this.name = this.name.toLowerCase();
+        this.name = Character.toUpperCase(this.name.charAt(0)) + this.name.substring(1);
     }
 
     public void setPrice(double price) throws Exception {

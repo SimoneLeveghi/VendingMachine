@@ -2,11 +2,16 @@ import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.event.EventHandler;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.layout.CornerRadii;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Font;
+import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
 
 public class GUI extends Application {
@@ -23,10 +28,12 @@ public class GUI extends Application {
         initVendingMachine();
 
         VBox vbox = new VBox();
-        Label label1 = new Label();
+        Label label1 = new Label("Vending Machine");
         HBox hbox1 = new HBox();
         HBox hbox2 = new HBox();
         Label label2 = new Label("Credit: " + Double.toString(vm.getCredit()));
+
+        label1.setFont(new Font(15));
 
         Product[] products = vm.getProducts();
 
@@ -39,21 +46,27 @@ public class GUI extends Application {
                 public void handle(ActionEvent event) {
                     try {
                         vm.buyProduct(I);
-                        label2.setText("Credit: " + Double.toString(vm.getCredit()));
+                        label2.setText("Credit: " + vm.getCredit());
                         label1.setText("You have purchased: " + products[I].getName());
                     }
                     catch(Exception ignored) {}
-
                 }
             });
+            b.setMinWidth((V.WIDTH - 60 - 40) / 4);
+            b.setMinHeight(50);
+            b.setFont(new Font(15));
 
             elem.getChildren().addAll(
                     b,
-                    new Label(Double.toString(products[i].getPrice())
+                    new Label("€" + products[i].getPrice()
             ));
             hbox1.getChildren().add(elem);
         }
+        hbox1.setSpacing(20);
+        hbox1.setAlignment(Pos.CENTER);
 
+
+        label2.setMinWidth(V.WIDTH / 2);
         hbox2.getChildren().add(label2);
         double[] coins = {0.50, 1.00, 2.00};
 
@@ -70,11 +83,18 @@ public class GUI extends Application {
                     catch(Exception ignored) {}
                 }
             });
+            b.setMinWidth((V.WIDTH / 2 - 40 - 30) / 3);
+
             hbox2.getChildren().add(b);
         }
+        hbox2.setSpacing(10);
+        hbox2.setAlignment(Pos.CENTER);
 
         vbox.getChildren().addAll(label1, hbox1, hbox2);
-        Scene scene = new Scene(vbox, 500, 500);
+        vbox.setPadding(new Insets(20));
+        vbox.setSpacing(20);
+
+        Scene scene = new Scene(vbox, V.WIDTH, V.HEIGHT);
         this.primaryStage.setScene(scene);
         this.primaryStage.show();
     }
